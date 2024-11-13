@@ -14,8 +14,8 @@ module.exports = {
           white: "#F2F2F2",
           violet: "#7165BF",
           blue: {
-            accent: "#3C41A6",
-            dark: "#1C31A6",
+            accent: "#0268AB",
+            dark: "#002060",
           },
         },
       },

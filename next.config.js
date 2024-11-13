@@ -23,7 +23,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    unoptimized: true,
+    unoptimized: false,
     remotePatterns: [
       {
         protocol: "https",
@@ -60,7 +60,7 @@ const nextConfig = {
             "frame-src":
               "'none' https://www.youtube.com/ https://docs.google.com/",
             "img-src":
-              "'self' https://is3.cloudhost.id/teknologipendidikan/objectstorage-pamerankarya/ https://drive.google.com https://*.googleusercontent.com",
+              "'self' https://is3.cloudhost.id/teknologipendidikan/objectstorage-pamerankarya/ https://drive.google.com https://*.googleusercontent.com data: https://*.google.com",
             "manifest-src": "'self'",
             "media-src": "'self'",
             "object-src": "'none'",

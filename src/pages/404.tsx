@@ -22,7 +22,7 @@ const Links404 = [
 export default function Custom404() {
   return (
     <div className="container mx-auto px-4 flex flex-col justify-center h-screen">
-      <h1 className="text-9xl font-bold">404 - Not Found</h1>
+      <h1 className="text-9xl font-bold">404 - Kamu Nyasar</h1>
       <p className="text-2xl font-semibold">
         Apa yang Anda cari tidak ada. Mungkin hal tersebut terletak di luar
         jangkauan Anda.

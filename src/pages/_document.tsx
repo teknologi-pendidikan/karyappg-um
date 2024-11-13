@@ -88,6 +88,8 @@ export default function Document() {
         ></meta>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#3284FF" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <link rel="icon" href="/favicon.ico" />
 
         {/* JSON-LD Structured Data */}
         <script

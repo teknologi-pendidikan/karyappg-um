@@ -50,14 +50,18 @@ export default function Home({ content, posts }) {
         className="bg-theme-blue-accent xl:bg-transparent relative"
         aria-label="Pameran Karya Teknologi Pendidikan 2023"
       >
-        <Image src={backgroundImage} alt="" className="absolute top-0 -z-20" />
         <Image
+          src={backgroundImage}
+          alt=""
+          className="absolute h-screen -z-20"
+        />
+        {/* <Image
           src={ImageBG}
           alt=""
           className="absolute top-0 -z-10 min-h-screen"
           priority
           quality={100}
-        />
+        /> */}
         <section
           aria-label="mainmenu"
           id="mainmenu"
@@ -78,7 +82,7 @@ export default function Home({ content, posts }) {
           <div className=" flex justify-center items-center lg:h-screen">
             <Image src={ImageProudly} alt="Mempersembahkan" />
           </div>
-         
+
           <Image src={divider} alt="" height={50} className="w-full" />
           <GeneralInformation listpost={posts} />
           <Image src={divider} alt="" height={50} className="w-full" />
