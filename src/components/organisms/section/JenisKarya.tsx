@@ -1,5 +1,5 @@
 import frameArtikel from "@/public/assets/placeholder_artikel.jpg";
-import frameMedia from "@/public/assets/placeholder_media.jpg";
+import frameMedia from "@/public/assets/placeholder_Media.jpg";
 import frameSertifikat from "@/public/assets/placeholder_PrestasiMahasiswa.jpg";
 import frameKatalog from "@/public/assets/placeholder_Katalog.jpg";
 import SectionLayout from "@/components/template/section-layout";
