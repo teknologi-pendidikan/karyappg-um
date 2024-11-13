@@ -16,10 +16,10 @@ const NAVLINK = [
   //   name: "Partisipan",
   //   link: "/partisipan",
   // },
-  {
-    name: "Lihat Karya",
-    link: "/karya",
-  },
+  // {
+  //   name: "Lihat Karya",
+  //   link: "/karya",
+  // },
   // {
   //   name: "Pedoman",
   //   link: "/post/pedoman-pengunjung",
