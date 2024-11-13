@@ -58,7 +58,7 @@ const nextConfig = {
             "form-action": "'self'",
             "frame-ancestors": "'none'",
             "frame-src":
-              "'none' https://www.youtube.com/ https://docs.google.com/",
+              "'none' https://www.youtube.com/ https://docs.google.com/ https://*.google.com",
             "img-src":
               "'self' https://is3.cloudhost.id/teknologipendidikan/objectstorage-pamerankarya/ https://drive.google.com https://*.googleusercontent.com data: https://*.google.com",
             "manifest-src": "'self'",

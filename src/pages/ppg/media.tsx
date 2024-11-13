@@ -36,11 +36,10 @@ const toProperCase = (str) => {
 const breakpoints = [4320, 2160, 1080, 640, 384, 256, 128];
 
 export default function Gallery({ photos }) {
-  console.log(photos);
   return (
     <div className="container mx-auto my-4 px-2">
-      <h1 className="text-4xl font-bold text-center py-8">
-        Karya Media PPG UM
+      <h1 className="text-7xl font-bold text-center py-8 text-blue-950">
+        Karya Media Mahasiswa PPG UM
       </h1>
 
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 pb-24 px-4">
@@ -61,12 +60,12 @@ export default function Gallery({ photos }) {
               />
             </div>
             <div className="flex flex-col justify-between w-full">
-              <h2 className="text-xl font-bold">{item.peserta}</h2>
+              <h2 className="text-xl font-bold">{item.title}</h2>
               <p className="text-base line-clamp-5">{item.deskripsi_karya}</p>
-              <p className="text-sm pt-2">
+              {/* <p className="text-sm pt-2">
                 Dikembangkan oleh:{" "}
                 <span className="font-semibold"> {item.peserta}</span>
-              </p>
+              </p> */}
             </div>
           </Link>
         ))}

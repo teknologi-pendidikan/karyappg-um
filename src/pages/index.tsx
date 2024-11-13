@@ -9,6 +9,7 @@ import ImaageMainmenuBG from "@/public/assets/bg-mainmenu.webp";
 import ImageProudly from "@/public/assets/proudlypresent.webp";
 import ImageTEPFestiva from "@/public/assets/tepfestiva.webp";
 import divider from "@/public/assets/divider.png";
+import Link from "next/link";
 
 import { GetStaticProps } from "next";
 import JenisKarya from "@/components/organisms/section/JenisKarya";
@@ -50,51 +51,76 @@ export default function Home({ content, posts }) {
         className="bg-theme-blue-accent xl:bg-transparent relative"
         aria-label="Pameran Karya Teknologi Pendidikan 2023"
       >
-        <Image
-          src={backgroundImage}
-          alt=""
-          className="absolute h-screen -z-20"
-        />
-        {/* <Image
-          src={ImageBG}
-          alt=""
-          className="absolute top-0 -z-10 min-h-screen"
-          priority
-          quality={100}
-        /> */}
-        <section
-          aria-label="mainmenu"
-          id="mainmenu"
-          className="relative flex items-center justify-center h-screen mb-32 overflow-hidden"
-        >
+        <section id="welcome-header" className="relative">
+          <img
+            src="/assets/bg-mainmenu.webp"
+            alt=""
+            className="absolute -top-20 -z-10 object-cover"
+          />
           <div
-            id="panel-mainmenu"
-            className="flex flex-col xl:flex-row justify-center items-center xl:space-x-[50rem] xl:w-full px-16 scale-[0.6] xl:scale-[0.6] 2xl:scale-[0.85] space-y-4 xl:mt-40 2xl:mt-80"
+            id="hero-bottomline"
+            className="absolute bottom-0 flex w-full items-center justify-center bg-blue-950"
           >
-            <LeftPanel content={content} />
-            <RightPanel content={content} />
+            <Link
+              href="#thematic-content"
+              className="p-2 text-center text-lg font-bold text-[#F9A134] underline hover:text-white focus:text-white"
+            >
+              Explorasi Karya Program Profesi Guru (PPG) UM
+            </Link>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-6 w-6 text-[#F9A134]"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </div>
+          <div
+            aria-label="mainmenu"
+            id="mainmenu"
+            className="relative flex items-center justify-center h-screen overflow-hidden"
+          >
+            <div
+              id="panel-mainmenu"
+              className="flex flex-col xl:flex-row justify-start items-center xl:space-x-[50rem] xl:w-full px-16 scale-[0.6] xl:scale-[0.6] 2xl:scale-[0.85] space-y-4 xl:mt-40 2xl:mt-80"
+            >
+              {/* <LeftPanel content={content} /> */}
+              <RightPanel content={content} />
+            </div>
           </div>
         </section>
-        <div
+
+        <section
           id="main-content"
           className="container mx-auto flex flex-col space-y-12 items-start justify-start px-4 lg:max-w-screen-3xl pb-24 text-white"
         >
-          <div className=" flex justify-center items-center lg:h-screen">
-            <Image src={ImageProudly} alt="Mempersembahkan" />
+          <div className="flex flex-col justify-center items-center lg:h-screen">
+            <h1 className="text-7xl font-extrabold text-center text-blue-950 pb-24 mt-12">
+              Pameran Karya Pendidikan Profesi Guru (PPG) Universitas Negeri
+              Malang 2024
+            </h1>
+            <JenisKarya />
           </div>
 
-          <Image src={divider} alt="" height={50} className="w-full" />
-          <GeneralInformation listpost={posts} />
-          <Image src={divider} alt="" height={50} className="w-full" />
-          <JenisKarya />
-          <Image src={divider} alt="" height={50} className="w-full" />
-          <Image src={informasiFungsiMedia} alt="informasi fungsi media" />
+          <Image className="mt-10" src={ImageProudly} alt="Mempersembahkan" />
+          {/* <Image src={divider} alt="" height={50} className="w-full" /> */}
+          {/* <GeneralInformation listpost={posts} /> */}
+          {/* <Image src={divider} alt="" height={50} className="w-full" /> */}
+          {/* <Image src={divider} alt="" height={50} className="w-full" /> */}
+          {/* <Image src={informasiFungsiMedia} alt="informasi fungsi media" /> */}
           <Image
             src={ImageTEPFestiva}
             alt="TEP Festiva"
             className="py-8 xl:hidden 2xl:block"
           />
-        </div>
+        </section>
       </main>
     </>
   );

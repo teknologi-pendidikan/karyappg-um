@@ -1,10 +1,7 @@
-import frame2D from "@/public/assets/Kategorisasi_2D.png";
-import frame3D from "@/public/assets/Kategorisasi_3D.png";
-import frameEbook from "@/public/assets/Kategorisasi_Ebook.png";
-import frameMI from "@/public/assets/Kategorisasi_MI.png";
-import framePresentasi from "@/public/assets/Kategorisasi_PPT.png";
-import frameVideo from "@/public/assets/Kategorisasi_VidNimasi.png";
-import frameWebsite from "@/public/assets/Kategorisasi_Website.png";
+import frameArtikel from "@/public/assets/placeholder_artikel.jpg";
+import frameMedia from "@/public/assets/placeholder_media.jpg";
+import frameSertifikat from "@/public/assets/placeholder_PrestasiMahasiswa.jpg";
+import frameKatalog from "@/public/assets/placeholder_Katalog.jpg";
 import SectionLayout from "@/components/template/section-layout";
 import JenisKaryaCard from "@components/molecules/JenisKaryaCards";
 import Slider from "react-slick";
@@ -14,46 +11,64 @@ import "slick-carousel/slick/slick-theme.css";
 const jeniskarya = [
   {
     id: 1,
-    title: "E-Book & Modul Ajar",
-    image: frameEbook,
-    link: "/karya/dokumenpembelajaran",
+    title: "Artikel Ilmiah",
+    image: frameArtikel,
+    link: "/ppg/artikel",
   },
   {
     id: 2,
-    title: "Poster & Citra 2D",
-    image: frame2D,
-    link: "/karya/2d",
+    title: "Media Pembelajaran",
+    image: frameMedia,
+    link: "/ppg/media",
   },
+  {
+    id: 3,
+    title: "Prestasi Mahasiswa",
+    image: frameSertifikat,
+    link: "/ppg/sertifikat",
+  },
+  {
+    id: 4,
+    title: "Katalog Gelar Karya",
+    image: frameKatalog,
+    link: "/ppg/katalog",
+  },
+  // {
+  //   id: 2,
+  //   title: "Poster & Citra 2D",
+  //   image: frame2D,
+  //   link: "/karya/2d",
+  // },
   // {
   //   id: 3,
   //   title: "Media 3D",
   //   image: frame3D,
   //   link: "/comingsoon",
   // },
-  {
-    id: 4,
-    title: "Video Pembelajaran",
-    image: frameVideo,
-    link: "/karya/videopembelajaran",
-  },
-  {
-    id: 5,
-    title: "Presentasi / PPT",
-    image: framePresentasi,
-    link: "/karya/presentasi",
-  },
-  {
-    id: 6,
-    title: "Multimedia Interaktif",
-    image: frameMI,
-    link: "/karya/multimedia",
-  },
-  {
-    id: 7,
-    title: "Web Pembelajaran",
-    image: frameWebsite,
-    link: "/karya/situsweb",
-  },
+  // {
+  //   id: 4,
+  //   title: "Video Pembelajaran",
+  //   image: frameVideo,
+  //   link: "/karya/videopembelajaran",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Presentasi / PPT",
+  //   image: framePresentasi,
+  //   link: "/karya/presentasi",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Multimedia Interaktif",
+  //   image: frameMI,
+  //   link: "/karya/multimedia",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Web Pembelajaran",
+  //   image: frameWebsite,
+  //   link: "/karya/situsweb",
+  // },
 ];
 
 export default function JenisKarya() {
@@ -71,12 +86,12 @@ export default function JenisKarya() {
     <SectionLayout
       id="kategori-karya"
       ariaLabel="Kategori karya yang dipamerkan"
-      title="Kategori Karya"
+      title="Karya Mahasiswa PPG "
       clasName="h-screen"
     >
       <div
         id="karyacard-desktop"
-        className="hidden lg:flex flex-row items-center justify-center space-x-4"
+        className="hidden lg:grid grid-cols-4 flex-row items-center justify-center space-x-4 mt-8"
       >
         {jeniskarya.map((item) => (
           <JenisKaryaCard

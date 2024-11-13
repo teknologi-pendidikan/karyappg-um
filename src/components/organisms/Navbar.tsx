@@ -9,21 +9,21 @@ type NavbarProps = {
 
 const NAVLINK = [
   {
-    name: "Tentang",
+    name: "Tentang Pameran Karya",
     link: "/post/tentang-pamerankarya",
   },
+  // {
+  //   name: "Partisipan",
+  //   link: "/partisipan",
+  // },
   {
-    name: "Partisipan",
-    link: "/partisipan",
-  },
-  {
-    name: "Karya",
+    name: "Lihat Karya",
     link: "/karya",
   },
-  {
-    name: "Pedoman",
-    link: "/post/pedoman-pengunjung",
-  },
+  // {
+  //   name: "Pedoman",
+  //   link: "/post/pedoman-pengunjung",
+  // },
 ];
 
 function Navbar(Navbar: NavbarProps) {

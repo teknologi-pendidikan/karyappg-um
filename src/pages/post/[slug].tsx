@@ -58,9 +58,9 @@ export default function PostPage({
       <article className="prose xl:prose-xl max-w-none">
         <Image
           src={`/${frontmatter.image}`}
-          width={600}
-          height={400}
           alt=""
+          width={1920}
+          height={1080}
           className="w-full"
         />
         <h1>{frontmatter.title}</h1>

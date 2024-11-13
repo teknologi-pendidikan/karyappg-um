@@ -19,7 +19,7 @@ const RightPanel: NextPage<RightPanelProps> = ({ content }) => {
   return (
     <>
       <div id="panel-right" className="wrapper-pers">
-        <div className="flex flex-col rotator-left space-y-2">
+        <div className="flex flex-col rotator space-y-2">
           {content.slice(5, 8).map((item) => (
             <MainPanelButtonPrimary
               key={item.id}

@@ -19,15 +19,15 @@ export default function Footer() {
               </span>
             </div>
             <div className="hidden md:flex flex-col md:flex-row space-y-5 md:space-y-0 space-x-0 md:space-x-6 lg:space-x-[60px] items-start justify-center mx-auto md:mx-0 mt-10 md:mt-0">
-              <FooterPrevent />
-              <FooterMainevent />
+              {/* <FooterPrevent /> */}
+              {/* <FooterMainevent /> */}
             </div>
           </div>
           <FooterSponsor />
         </div>
         <hr className="h-[1px] bg-white md:bg-discolored-800 mt-10 md:mt-[67px]" />
         <p className="text-white font-semibold text-[14px] md:text-[16px] mt-3 pb-3 md:mt-5 md:pb-10 text-center md:text-right">
-          © 2023
+          © 2024
           <a href="https://teknologipendidikan.or.id">
             {" "}
             Teknologi Pendidikan ID (EDTECH-ID){" "}
@@ -37,7 +37,8 @@ export default function Footer() {
             {" "}
             Learning Center Engineering Team (GovTech UM){" "}
           </a>
-          <br /> All rights reserved.
+          <br /> Seluruh aset dilindungi Undang - Undang Hak Kekayaan
+          Intelektual Yuridiksi Indonesia .
         </p>
       </div>
     </footer>
