@@ -38,7 +38,7 @@ export default function DokumenPembelajaran({ content }: dataKarya) {
             key={item.uuid_karya}
             href={item.src_obj}
           >
-            <div className="flex items-center justify-center w-full">
+            {/* <div className="flex items-center justify-center w-full">
               <Image
                 className="object-cover rounded"
                 src="/assets/placeholder-500x500.png"
@@ -47,7 +47,7 @@ export default function DokumenPembelajaran({ content }: dataKarya) {
                 height={500}
                 id={`img-${item.uuid_karya}`}
               />
-            </div>
+            </div> */}
             <div className="flex flex-col justify-between w-full">
               <h2 className="text-xl font-bold">
                 {toProperCase(

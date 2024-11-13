@@ -91,7 +91,7 @@ export default function JenisKarya() {
     >
       <div
         id="karyacard-desktop"
-        className="hidden lg:grid grid-cols-4 flex-row items-center justify-center space-x-4 mt-8"
+        className="grid grid-cols-1 lg:grid-cols-4 lg:flex-row lg:items-center lg:justify-center lg:space-x-4 mt-8"
       >
         {jeniskarya.map((item) => (
           <JenisKaryaCard
@@ -101,18 +101,6 @@ export default function JenisKarya() {
             link={item.link}
           />
         ))}
-      </div>
-      <div id="container-karyacard-mobile" className="xl:hidden">
-        <Slider {...sliderSetting}>
-          {jeniskarya.map((item) => (
-            <JenisKaryaCard
-              key={item.id}
-              title={item.title}
-              image={item.image}
-              link={item.link}
-            />
-          ))}
-        </Slider>
       </div>
     </SectionLayout>
   );

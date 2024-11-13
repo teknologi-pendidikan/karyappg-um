@@ -16,11 +16,6 @@ import JenisKarya from "@/components/organisms/section/JenisKarya";
 import informasiFungsiMedia from "@/public/assets/informasi-fungsimedia.webp";
 import GeneralInformation from "@/components/organisms/section/GeneralInformation";
 
-const ImagesBGTimeCollection = {
-  bgDay: require("@/public/assets/bg-pagi.webp"),
-  bgNig: require("@/public/assets/bg-malam.webp"),
-};
-
 import fs from "fs";
 import matter from "gray-matter";
 
@@ -32,14 +27,6 @@ type Frontcontent = {
 };
 
 export default function Home({ content, posts }) {
-  const time = new Date().getHours();
-  console.log(time);
-
-  const backgroundImage =
-    time >= 6 && time < 18
-      ? ImagesBGTimeCollection.bgDay
-      : ImagesBGTimeCollection.bgNig;
-
   return (
     <>
       <Head>
@@ -47,25 +34,36 @@ export default function Home({ content, posts }) {
           Pameran Karya Teknologi Pendidikan 2023 - Universitas Negeri Malang
         </title>
       </Head>
-      <main
-        className="bg-theme-blue-accent xl:bg-transparent relative"
-        aria-label="Pameran Karya Teknologi Pendidikan 2023"
-      >
-        <section id="welcome-header" className="relative">
+      <main aria-label="Pameran Karya Teknologi Pendidikan 2023">
+        <section id="welcome-header" className="relative hidden lg:block">
           <img
             src="/assets/bg-mainmenu.webp"
-            alt=""
-            className="absolute -top-20 -z-10 object-cover"
+            alt="Welcome Hero Header"
+            className="h-screen max-h-screen w-full object-cover origin-right"
+            // width={1920}
+            // height={1080}
           />
+          <div id="hero-content" className="absolute bottom-10 w-full">
+            <div className="flex max-w-2xl flex-col items-start justify-start space-y-4 pt-32 lg:p-12">
+              <h1 className="bg-blue-400 p-3 text-4xl font-bold text-black">
+                Pameran Karya Pendidikan Profesi Guru (PPG) Sekolah Pascasarjana
+                UM
+              </h1>
+              <p className="line-clamp-4 hidden bg-green-700 p-3 text-base text-white lg:line-clamp-none lg:block">
+                Selamat datang di Pameran Karya Pendidikan Profesi Guru (PPG).
+              </p>
+            </div>
+          </div>
           <div
             id="hero-bottomline"
-            className="absolute bottom-0 flex w-full items-center justify-center bg-blue-950"
+            className="absolute bottom-0 flex w-full items-center justify-center bg-theme-brandblue-dark"
           >
             <Link
               href="#thematic-content"
-              className="p-2 text-center text-lg font-bold text-[#F9A134] underline hover:text-white focus:text-white"
+              className="p-2 text-center text-lg font-bold text-white underline hover:text-white focus:text-white"
             >
-              Explorasi Karya Program Profesi Guru (PPG) UM
+              Explorasi Karya Pendidikan Profesi Guru (PPG) Universitas Negeri
+              Malang
             </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +71,7 @@ export default function Home({ content, posts }) {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="h-6 w-6 text-[#F9A134]"
+              className="h-6 w-6 text-white"
             >
               <path
                 strokeLinecap="round"
@@ -82,34 +80,25 @@ export default function Home({ content, posts }) {
               />
             </svg>
           </div>
-          <div
-            aria-label="mainmenu"
-            id="mainmenu"
-            className="relative flex items-center justify-center h-screen overflow-hidden"
-          >
-            <div
-              id="panel-mainmenu"
-              className="flex flex-col xl:flex-row justify-start items-center xl:space-x-[50rem] xl:w-full px-16 scale-[0.6] xl:scale-[0.6] 2xl:scale-[0.85] space-y-4 xl:mt-40 2xl:mt-80"
-            >
-              {/* <LeftPanel content={content} /> */}
-              <RightPanel content={content} />
-            </div>
-          </div>
         </section>
 
         <section
           id="main-content"
-          className="container mx-auto flex flex-col space-y-12 items-start justify-start px-4 lg:max-w-screen-3xl pb-24 text-white"
+          className="container mx-auto flex flex-col space-y-4 lg:space-y-12 items-start justify-start px-4 lg:max-w-screen-3xl pb-24 text-white"
         >
           <div className="flex flex-col justify-center items-center lg:h-screen">
-            <h1 className="text-7xl font-extrabold text-center text-blue-950 pb-24 mt-12">
+            <h1 className="lg:text-7xl text-2xl font-extrabold lg:text-center text-blue-950 lg:pb-24 pb-8 mt-12">
               Pameran Karya Pendidikan Profesi Guru (PPG) Universitas Negeri
               Malang 2024
             </h1>
             <JenisKarya />
           </div>
 
-          <Image className="mt-10" src={ImageProudly} alt="Mempersembahkan" />
+          <Image
+            className="lg:mt-10"
+            src={ImageProudly}
+            alt="Mempersembahkan"
+          />
           {/* <Image src={divider} alt="" height={50} className="w-full" /> */}
           {/* <GeneralInformation listpost={posts} /> */}
           {/* <Image src={divider} alt="" height={50} className="w-full" /> */}
@@ -118,7 +107,7 @@ export default function Home({ content, posts }) {
           <Image
             src={ImageTEPFestiva}
             alt="TEP Festiva"
-            className="py-8 xl:hidden 2xl:block"
+            className="lg:py-8 xl:hidden 2xl:block"
           />
         </section>
       </main>

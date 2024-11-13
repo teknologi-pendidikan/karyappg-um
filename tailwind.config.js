@@ -10,12 +10,8 @@ module.exports = {
       },
       colors: {
         theme: {
-          flower: "#D9A3D5",
-          white: "#F2F2F2",
-          violet: "#7165BF",
-          blue: {
-            accent: "#0268AB",
-            dark: "#002060",
+          brandblue: {
+            dark: "#081F5C",
           },
         },
       },

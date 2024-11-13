@@ -61,13 +61,13 @@ function Navbar(Navbar: NavbarProps) {
 
       <nav className="fixed lg:hidden bottom-0 w-screen text-white z-10">
         <Link href="/">
-          <div className="px-2 text-center h-10 bg-theme-blue-accent flex items-center justify-center">
+          <div className="px-2 text-center h-10 bg-theme-brandblue-dark flex items-center justify-center">
             <p className="font-bold underline underline-offset-4">
               Kembali ke halaman utama
             </p>
           </div>
         </Link>
-        <div className="h-12 px-8 flex flex-row gap-6 items-center justify-center bg-theme-blue-dark py-3">
+        <div className="h-12 px-8 flex flex-row gap-6 items-center justify-center bg-blue-950 py-3">
           {NAVLINK.map((link) => (
             <Link href={link.link} key={link.link}>
               <div className="px-2 text-center">
