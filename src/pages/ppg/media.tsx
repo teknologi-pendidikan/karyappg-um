@@ -42,6 +42,14 @@ export default function Gallery({ photos }) {
         Karya Media Mahasiswa PPG UM
       </h1>
 
+      <iframe
+        src="https://drive.google.com/file/d/1emA4j1HNGtvG3nkBHs0u-eWTTCfkaJCq/preview"
+        width="1280"
+        height="720"
+        allow="autoplay"
+        className="w-full py-12"
+      ></iframe>
+
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 pb-24 px-4">
         {photos.map((item) => (
           <Link
@@ -61,7 +69,7 @@ export default function Gallery({ photos }) {
             </div>
             <div className="flex flex-col justify-between w-full">
               <h2 className="text-xl font-bold">{item.title}</h2>
-              <p className="text-base line-clamp-5">{item.deskripsi_karya}</p>
+              <p className="text-base line-clamp-5">{item.description}</p>
               {/* <p className="text-sm pt-2">
                 Dikembangkan oleh:{" "}
                 <span className="font-semibold"> {item.peserta}</span>

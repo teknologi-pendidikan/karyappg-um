@@ -12,6 +12,10 @@ const NAVLINK = [
     name: "Tentang Pameran Karya",
     link: "/post/tentang-pamerankarya",
   },
+  {
+    name: "Roadmap Penelitian",
+    link: "/roadmap",
+  },
   // {
   //   name: "Partisipan",
   //   link: "/partisipan",
@@ -40,7 +44,7 @@ function Navbar(Navbar: NavbarProps) {
           <h1 className="hidden">Pameran Karya Teknologi Pendidikan 2023</h1>
           <LogoPameran
             width={200}
-            height={75}
+            height={80}
             colorKarya={Navbar.colorLogo}
             colorPameran={Navbar.colorLogo}
             colorTEP={Navbar.colorLogo}

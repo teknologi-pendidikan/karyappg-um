@@ -13,13 +13,13 @@ export default function FooterSponsor() {
     <div className="flex flex-col md:flex-row items-center md:justify-end">
       <div className="flex flex-col mt-10 h-full">
         <span className="text-white text-xl font-semibold text-center md:text-right">
-          Didukung oleh:
+          Infrastucture & Support by:
         </span>
         <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-end md:space-x-6">
-          <Link href="https://youtube.com/c/tepum">
+          <Link href="https://learningcenter.um.ac.id">
             <LogoTEPUM
               height={80}
-              width={110}
+              width={225}
               fill="#fff"
               className="hover:scale-125 transition ease-in-out duration-500"
             />
@@ -30,7 +30,7 @@ export default function FooterSponsor() {
           <Link href="https://edtech.or.id">
             <LogoDPTSI
               height={80}
-              width={130}
+              width={300}
               fill="#fff"
               className="hover:scale-125 transition ease-in-out duration-500"
             />

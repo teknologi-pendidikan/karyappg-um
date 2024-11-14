@@ -24,7 +24,7 @@ export default function Footer() {
               {/* <FooterMainevent /> */}
             </div>
           </div>
-          {/* <FooterSponsor /> */}
+          <FooterSponsor />
         </div>
         <hr className="h-[1px] bg-white md:bg-discolored-800 mt-10 md:mt-[67px]" />
         <p className="text-white font-semibold text-[14px] md:text-[16px] mt-3 pb-3 md:mt-5 md:pb-10 text-center md:text-right">

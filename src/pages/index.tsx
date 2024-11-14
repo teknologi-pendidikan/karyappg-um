@@ -31,7 +31,8 @@ export default function Home({ content, posts }) {
     <>
       <Head>
         <title>
-          Pameran Karya Teknologi Pendidikan 2023 - Universitas Negeri Malang
+          Produk Tridarma Pendidikan Profesi Guru (PPG) Universitas Negeri
+          Malang
         </title>
       </Head>
       <main aria-label="Pameran Karya Teknologi Pendidikan 2023">
@@ -46,12 +47,30 @@ export default function Home({ content, posts }) {
           <div id="hero-content" className="absolute bottom-10 w-full">
             <div className="flex max-w-2xl flex-col items-start justify-start space-y-4 pt-32 lg:p-12">
               <h1 className="bg-blue-400 p-3 text-4xl font-bold text-black">
-                Pameran Karya Pendidikan Profesi Guru (PPG) Sekolah Pascasarjana
-                UM
+                Produk Tridarma Pendidikan Profesi Guru (PPG) Sekolah
+                Pascasarjana UM
               </h1>
               <p className="line-clamp-4 hidden bg-green-700 p-3 text-base text-white lg:line-clamp-none lg:block">
-                Selamat datang di Pameran Karya Pendidikan Profesi Guru (PPG).
+                Selamat datang di Produk Tridarma Pendidikan Profesi Guru (PPG).
               </p>
+              <Link
+                href={"/ppg/"}
+                className="line-clamp-4 hidden bg-yellow-400 p-3 text-base text-black lg:line-clamp-none lg:block transition ease-in-out duration-500 hover:scale-110"
+              >
+                Daftar Produk Tridarma Mahasiswa PPG
+              </Link>
+              <Link
+                href={"/ppm/penelitian"}
+                className="line-clamp-4 hidden bg-yellow-400 p-3 text-base text-black lg:line-clamp-none lg:block transition ease-in-out duration-500 hover:scale-110"
+              >
+                Daftar Luaran Penelitian PPG
+              </Link>
+              <Link
+                href={"/ppm/pengabdian"}
+                className="line-clamp-4 hidden bg-yellow-400 p-3 text-base text-black lg:line-clamp-none lg:block transition ease-in-out duration-500 hover:scale-110"
+              >
+                Daftar Luaran Pengabdian PPG
+              </Link>
             </div>
           </div>
           <div
@@ -62,8 +81,8 @@ export default function Home({ content, posts }) {
               href="#thematic-content"
               className="p-2 text-center text-lg font-bold text-white underline hover:text-white focus:text-white"
             >
-              Explorasi Karya Pendidikan Profesi Guru (PPG) Universitas Negeri
-              Malang
+              Explorasi Produk Tridarma Pendidikan Profesi Guru (PPG)
+              Universitas Negeri Malang
             </Link>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +107,7 @@ export default function Home({ content, posts }) {
         >
           <div className="flex flex-col justify-center items-center lg:h-screen">
             <h1 className="lg:text-7xl text-2xl font-extrabold lg:text-center text-blue-950 lg:pb-24 pb-8 mt-12">
-              Pameran Karya Pendidikan Profesi Guru (PPG) Universitas Negeri
+              Produk Tridarma Pendidikan Profesi Guru (PPG) Universitas Negeri
               Malang 2024
             </h1>
             <JenisKarya />

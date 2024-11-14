@@ -28,8 +28,8 @@ export default function DokumenPembelajaran({ content }: dataKarya) {
   return (
     <SectionLayout
       id="karya-dokumen-pembelajaran"
-      ariaLabel="Luaran Artikel Ilmiah"
-      title="Luaran Artikel Mahasiswa PPG UM"
+      ariaLabel="Artikel Ilmiah"
+      title="Artikel Mahasiswa PPG UM"
     >
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-8 pb-24 px-4">
         {content.map((item) => (
